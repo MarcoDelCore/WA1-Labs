@@ -1,0 +1,70 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/films
+
+###
+
+GET http://localhost:3000/films/favourite
+
+###
+
+GET http://localhost:3000/films/best
+
+###
+
+GET http://localhost:3000/films/watchedLastMonth
+
+###
+
+GET http://localhost:3000/films/unwatched
+
+###
+
+GET http://localhost:3000/films/4
+
+###
+
+POST http://localhost:3000/films/add
+content-type: application/json
+
+{
+  "title": "Pulp Fiction",
+  "favorite": true,
+  "rating": 5,
+  "watchDate": "2024-02-12",
+  "userId": 1
+}
+
+###
+
+PUT http://localhost:3000/films/update/4
+Content-Type: application/json
+
+{
+  "title": "Film a caso",
+  "favorite": false,
+  "rating": 5,
+  "watchDate": "2020-06-10",
+  "userId": 3
+}
+
+###
+
+PUT http://localhost:3000/films/updateRating/4
+content-type: text/plain
+
+4
+
+###
+
+PUT http://localhost:3000/films/4/setAsFavorite
+
+###
+
+PUT http://localhost:3000/films/4/setAsNotFavorite
+
+###
+
+DELETE http://localhost:3000/films/3
